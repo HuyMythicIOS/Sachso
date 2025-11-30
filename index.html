@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Trang chủ - Project</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <div class="brand">Project nhóm</div>
+    <nav class="menu">
+      <ul>
+        <li><a href="#">Trang chủ</a></li>
+        <li><a href="#">Giới thiệu</a></li>
+        <li class="dropdown">Tin tức
+          <ul class="dropdown-menu">
+            <li><a href="#">Tin mới</a></li>
+            <li><a href="#">Sự kiện</a></li>
+          </ul>
+        </li>
+        <li><a href="#">Dịch vụ</a></li>
+        <li><a href="#catalog" onclick="document.getElementById('catalogContainer')?.scrollIntoView({behavior:'smooth'})">Catalog sách</a></li>
+        <li><a href="#">Liên hệ</a></li>
+      </ul>
+    </nav>
+    <div class="user-area" id="userArea">
+      <!-- JS sẽ render: Login / Hi user / Admin link -->
+    </div>
+  </header>
+
+  <main>
+    <!-- Slider 3 ảnh (tự động chuyển) -->
+    <section class="hero">
+      <img id="slideImg" src="images/1.jpg" alt="slide" />
+    </section>
+
+    <section class="container">
+      <h2>Bài nổi bật</h2>
+      <div id="featured" class="grid-3"></div>
+    </section>
+
+    <section class="container">
+      <h2>Trending (slider ngang)</h2>
+      <div class="scroll-x" id="hScroll"></div>
+    </section>
+
+    <section class="container">
+      <h2>Tất cả bài viết</h2>
+      <div id="posts" class="list"></div>
+      <div style="text-align:center; margin:16px;">
+        <button id="loadMoreBtn" onclick="loadMore()">Xem thêm</button>
+      </div>
+    </section>
+
+    <!-- Catalog will be injected before footer by app.js -->
+  </main>
+
+  <footer>
+    <small>Project cửa hàng sách số — chạy local bằng trình duyệt</small>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>

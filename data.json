@@ -1,0 +1,12 @@
+{
+  "users": [
+    { "username": "admin", "password": "123", "role": "admin", "name": "Admin" },
+    { "username": "editor", "password": "123", "role": "editor", "name": "Editor" },
+    { "username": "user", "password": "123", "role": "user", "name": "User" }
+  ],
+  "posts": [
+    { "id": 1, "type": "post", "title": "Bài viết số 1", "excerpt": "Tóm tắt 1", "content": "Nội dung chi tiết bài 1", "thumbnail": "images/thumbnail.jpg", "author": "admin", "status": "published", "created_at": 1700000000000 },
+    { "id": 100, "type": "book", "title": "Sách Số: Lập Trình Web Cơ Bản", "author": "Nguyễn Văn A", "isbn": "978-1-23456-789-7", "price": 120000, "rating": 4, "excerpt": "Sách hướng dẫn lập trình web cho người mới.", "content": "Nội dung & mô tả chi tiết sách, mục lục, ...", "thumbnail": "images/books/book1.jpg", "status": "published", "created_at": 1699000000000 },
+    { "id": 101, "type": "book", "title": "Ebook: Thiết Kế Giao Diện", "author": "Trần Thị B", "isbn": "978-0-98765-432-1", "price": 90000, "rating": 5, "excerpt": "Tập trung vào UI/UX cơ bản.", "content": "Nội dung sách ebook thiết kế giao diện.", "thumbnail": "images/books/book2.jpg", "status": "published", "created_at": 1699500000000 }
+  ]
+}

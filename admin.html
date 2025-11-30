@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Admin - Quản lý</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <div class="brand">Admin Panel</div>
+    <div class="user-area" id="adminUserArea"></div>
+  </header>
+
+  <main class="container">
+    <h2>Quản lý bài viết / sách</h2>
+
+    <form id="postForm" onsubmit="savePost(event)">
+      <input id="postId" type="hidden" />
+      <label>Loại</label>
+      <select id="postType">
+        <option value="post">Post (bài viết)</option>
+        <option value="book">Book (sách - catalog)</option>
+      </select>
+
+      <label>Tiêu đề</label>
+      <input id="postTitle" required />
+
+      <label>Tác giả (author)</label>
+      <input id="postAuthor" placeholder="Tên tác giả (vd: Nguyễn A)" />
+
+      <label>ISBN</label>
+      <input id="postISBN" placeholder="ISBN (tùy chọn)" />
+
+      <label>Giá (VND)</label>
+      <input id="postPrice" placeholder="120000" type="number" />
+
+      <label>Rating (1-5)</label>
+      <input id="postRating" type="number" min="1" max="5" step="1" placeholder="4" />
+
+      <label>Mô tả ngắn</label>
+      <input id="postExcerpt" required />
+
+      <label>Nội dung / Mô tả đầy đủ</label>
+      <textarea id="postContent" rows="6" required></textarea>
+
+      <label>Ảnh (url) — ví dụ: images/books/book1.jpg</label>
+      <input id="postThumb" placeholder="images/books/book1.jpg" />
+
+      <label>Trạng thái</label>
+      <select id="postStatus">
+        <option value="published">published</option>
+        <option value="draft">draft</option>
+      </select>
+
+      <div class="row">
+        <button type="submit">Lưu</button>
+        <button type="button" onclick="resetForm()">Clear</button>
+      </div>
+    </form>
+
+    <h3>Danh sách bài viết</h3>
+    <div id="adminPosts"></div>
+
+    <hr/>
+    <h2>Danh sách người dùng (mẫu)</h2>
+    <div id="adminUsers"></div>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>

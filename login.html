@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Đăng nhập - Project</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="center-box">
+    <h1>Đăng nhập</h1>
+    <form id="loginForm" onsubmit="handleLogin(event)">
+      <label>Username</label>
+      <input id="username" required placeholder="admin / editor / user" />
+      <label>Password</label>
+      <input id="password" type="password" required placeholder="123" />
+      <div class="row">
+        <button type="submit">Đăng nhập</button>
+        <a href="index.html" class="ghost">Xem trang không đăng nhập</a>
+      </div>
+      <p id="loginError" class="error"></p>
+    </form>
+
+    <section class="note">
+      <strong>Tài khoản mẫu:</strong>
+      <ul>
+        <li>admin / 123 (role: admin)</li>
+        <li>editor / 123 (role: editor)</li>
+        <li>user / 123 (role: user)</li>
+      </ul>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
